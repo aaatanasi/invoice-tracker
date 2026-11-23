@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Payment Overview · Invoice Tracker</title><link rel="stylesheet" href="invoice.css"></head>
+<body>
+<header class="bar"><div><div class="brand">Payment Tracker</div></div><span class="edition-badge">PORTFOLIO EDITION · SAMPLE DATA</span></header>
+<div class="workspace"><nav class="side" aria-label="Workspace"><span class="side-mark">PT</span><div class="side-title">Payment Tracker</div><div class="eyebrow">WORKSPACE</div><button class="side-all" id="all">All designers</button><div class="eyebrow">DESIGNERS</div><div id="side-brands"></div><button class="side-add" data-open="brand">+ Add Brand &amp; Season</button></nav><main><div class="breadcrumb">Workspace <span>/</span> <span id="crumb">All designers</span></div>
+<section class="hero"><div><div class="eyebrow">ACCOUNTS RECEIVABLE</div><h1>Payment Overview</h1><p>Review commission invoices, track payments, and follow up on open balances.</p></div><div class="actions"><button data-open="new" class="primary">+ New Invoice</button><button data-open="import">Import invoices</button><button id="export">Export CSV</button></div></section>
+<div class="summary" id="summary"></div>
+<section class="panel" aria-labelledby="register-title"><div class="panel-head"><div><div class="eyebrow">INVOICE MANAGEMENT</div><h2 id="register-title">Invoice Register</h2></div><span id="count" class="count"></span></div>
+<div class="filters"><label>Brand <select id="brand"><option value="">All brands</option></select></label><label>Season <select id="season"><option value="">All seasons</option></select></label><label>Status <select id="status"><option value="">All statuses</option><option>Paid</option><option>Unpaid</option><option>Partial</option></select></label><label class="search">Search <input id="query" type="search" placeholder="Account, invoice or designer"></label></div>
+<div class="table-wrap"><table><thead><tr><th>Account</th><th>Designer</th><th>Comments</th><th>Invoice</th><th><button id="sort-due" class="sort" aria-label="Sort by due date">Due date ↕</button></th><th class="num">Amount</th><th>Status</th><th>Shipment</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="foot">Fictional records only. Changes reset when you reload the page.</p></section>
+</main></div>
+<dialog id="dialog" aria-labelledby="dialog-title"><form id="form"><div class="dialog-heading"><h2 id="dialog-title"></h2><button type="button" id="close" aria-label="Close dialog">×</button></div><div id="fields"></div><div class="dialog-actions"><button type="button" id="cancel">Cancel</button><button class="primary" id="submit" type="submit"></button></div></form></dialog>
+<div id="message" role="status"></div><script src="invoice.js"></script></body></html>
